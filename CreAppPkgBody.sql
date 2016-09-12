@@ -1,6 +1,6 @@
 create	or	replace
 package	body
-	ccAppPkg
+hr.ccAppPkg
 as
 /*	Package constants
 	*/
