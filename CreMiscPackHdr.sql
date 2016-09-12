@@ -137,21 +137,6 @@ as
 	and	dc2.dcIdParent		is	NULL
 	and	SYSDATE	between			dc2.dcValidFrom
 					and	dc2.dcValidTo;
-/****************************************************************************
- * get Oracle instance identifier for OPS sequence optimisation             *
- ****************************************************************************/
-/*	cursor	c_getInstanceId
-	is
-	select	 instance_number
-	from	 v$instance;
-	*/
-	cursor	c_getInstanceId
-	is
-	select	 0	instance_number
-	from	 dual;
-/*	Package functions
-	*/
-	function	getInstanceId
-	return		c_getInstanceId%ROWTYPE;
+
 end	ccMiscPkg;
 /
